@@ -62,8 +62,8 @@
                 <!-- Logo -->
                 <div id="logo" class="hide-ball">
                     <a class="ajax-link" data-type="page-transition" href="index.html">
-                        <img class="black-logo" src="images/logo.png" alt="ClaPat Logo">
-                        <img class="white-logo" src="images/logo-white.png" alt="ClaPat Logo">
+                        <img class="black-logo" src="{{main.logo.url}}" alt="ClaPat Logo">
+                        <img class="white-logo" src="{{main.logo.url}}" alt="ClaPat Logo">
                     </a>
                 </div>
                 <!--/Logo -->
@@ -139,9 +139,9 @@
                         <div id="hero-styles">
                             <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center height-title">
                                 <div class="inner">                                    
-                                    <h1 class="hero-title caption-timeline primary-font-title"><span>Montoya</span></h1>
+                                    <h1 class="hero-title caption-timeline primary-font-title"><span>{{main.title}}</span></h1>
                                     <div class="hero-subtitle caption-timeline">
-                                    	<span>WE ARE A CREATIVE STUDIO, SPECIALIZED IN STRATEGY, BRANDING <br class="destroy"> DESIGN, AND DEVELOPMENT. OUR WORK IS ALWAYS AT THE INTERSECTION <br class="destroy"> OF DESIGN AND TECHNOLOGY.</span>
+                                    	<span>{{main.description}}</span>
                                     </div>                                   
                                 </div>
                             </div>
@@ -183,9 +183,9 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="project01.html"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="images/01hero.jpg" class="item-image grid__item-img" alt="">
+                                                            <img src="{% static 'images/01hero.jpg' %}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="images/01hero.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{% static 'images/01hero.jpg' %}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>White Liners</span></div>
@@ -200,9 +200,9 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="project02.html"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="images/02hero.jpg" class="item-image grid__item-img" alt="">
+                                                            <img src="{% static 'images/02hero.jpg' %}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="images/02hero.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{% static 'images/02hero.jpg' %}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Green Audio</span></div>                                                    
@@ -217,9 +217,9 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="project03.html"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="images/03hero.jpg" class="item-image grid__item-img" alt="">
+                                                            <img src="{% static 'images/03hero.jpg' %}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="images/03hero.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{% static 'images/03hero.jpg' %}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Nanotech</span></div>                                                    
@@ -234,14 +234,14 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="project04.html"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="images/04hero.jpg" class="item-image grid__item-img" alt="">
+                                                            <img src="{% static 'images/04hero.jpg' %}" class="item-image grid__item-img" alt="">
                                                             <div class="hero-video-wrapper">
                                                                 <video loop muted class="bgvid">
-                                                                    <source src="images/04hero.mp4" type="video/mp4">
+                                                                    <source src="{% static 'images/04hero.mp4' %}" type="video/mp4">
                                                                 </video>
                                                             </div>
                                                         </div>                                                
-                                                        <img src="images/04hero.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{% static 'images/04hero.jpg' %}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Cool Dude</span></div>
@@ -256,7 +256,7 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="project05.html"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="images/05hero.jpg" class="item-image grid__item-img" alt="">
+                                                            <img src="{% static 'images/05hero.jpg' %}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
                                                         <img src="images/05hero.jpg" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
