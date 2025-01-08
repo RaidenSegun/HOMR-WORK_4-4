@@ -37,13 +37,13 @@
                 <div class="inner">                    
                     <div class="trackbar">
                     	<div class="preloader-intro">
-                        	<span>Loading</span>
+                        	<span>Загрузка</span>
                         </div>
                         <div class="loadbar"></div>
                         <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
                     </div>
                     
-                    <div class="percentage-intro">Please wait, content is loading</div>                     
+                    <div class="percentage-intro">Пожалуйста, подождите, контент загружается.</div>                     
                 </div>
             </div>
         </div>
@@ -62,8 +62,8 @@
                 <!-- Logo -->
                 <div id="logo" class="hide-ball">
                     <a class="ajax-link" data-type="page-transition" href="index.html">
-                        <img class="black-logo" src="images/logo.png" alt="ClaPat Logo">
-                        <img class="white-logo" src="images/logo-white.png" alt="ClaPat Logo">
+                        <img class="black-logo" src="{{main.logo.url}}" alt="ClaPat Logo">
+                        <img class="white-logo" src="{{main.logo.url}}" alt="ClaPat Logo">
                     </a>
                 </div>
                 <!--/Logo -->
@@ -82,8 +82,8 @@
                                             <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
                                         </ul>
                                     </li>
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="About">About</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="{% url 'about' %}"><div class="before-span"><span data-hover="About">About</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="{% url 'contact' %}"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
                                     <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="More">More</span></div></a>
                                         <ul>
                                             <li><a class="ajax-link" href="typography.html" data-type="page-transition">Typography</a></li>                                         
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div> 
+                    <div class="button-text sticky right"><span data-hover="Menu">Меню</span></div> 
                 </div>
                 <!--/Menu Burger -->
             
@@ -134,9 +134,9 @@
                         <div id="hero-styles">
                             <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center height-title">
                                 <div class="inner">                                    
-                                    <h1 class="hero-title caption-timeline primary-font-title"><span>Contact</span></h1>
+                                    <h1 class="hero-title caption-timeline primary-font-title"><span>{{contact.title}}</span></h1>
                                     <div class="hero-subtitle caption-timeline">
-                                    	<span>WE ARE A CREATIVE STUDIO, SPECIALIZED IN STRATEGY, BRANDING <br class="destroy"> DESIGN, AND DEVELOPMENT. OUR WORK IS ALWAYS AT THE INTERSECTION <br class="destroy"> OF DESIGN AND TECHNOLOGY.</span>
+                                    	<span>{{contact.description}}</span>
                                     </div>                                   
                                 </div>
                             </div>
@@ -148,11 +148,11 @@
                                                 <i class="fa-solid fa-angle-down"></i>
                                             </div>
                                         </div>
-                                        <div class="button-text sticky right"><span data-hover="Scroll to Explore">Scroll to Explore</span></div> 
+                                        <div class="button-text sticky right"><span data-hover="Scroll to Explore">Прокручивайте, чтобы исследовать.</span></div> 
                                     </div>
                                 </div>
                                 <div class="hero-footer-right">
-                    				<div id="info-text">Featured Projects</div>
+                    				<div id="info-text">Избранные проекты</div>
                                 </div>
                             </div>                                  
                         </div>
@@ -178,7 +178,7 @@
                             <!-- Row -->
                             <div class="content-row row_padding_top row_padding_bottom dark-section text-align-center" data-bgcolor="#0c0c0c">
                                 
-                                <h2 class="big-title has-mask-fill primary-font-title">Let's Talk</h2>
+                                <h2 class="big-title has-mask-fill primary-font-title">Давайте поговорим</h2>
                                 
                                 <hr><hr> 
                                 
@@ -189,13 +189,13 @@
                                 
                                     <form method="post" action="contact.php" name="contactform" id="contactform">                             
                                         <div class="name-box">        
-                                            <input name="name" type="text" id="name" size="30" value="" placeholder="What's Your Name"><label class="input_label"></label>
+                                            <input name="name" type="text" id="name" size="30" value="" placeholder="Ваше имя"><label class="input_label"></label>
                                         </div>                                                        
                                         <div class="email-box">
-                                            <input name="email" type="text" id="email" size="30" value="" placeholder="Your Email"><label class="input_label"></label>
+                                            <input name="email" type="text" id="email" size="30" value="" placeholder="Ваш Email"><label class="input_label"></label>
                                         </div>                            
                                         <div class="message-box">
-                                            <textarea name="comments" cols="40" rows="4" id="comments" placeholder="Tell Us About Your Project" ></textarea><label class="input_label slow"></label>
+                                            <textarea name="comments" cols="40" rows="4" id="comments" placeholder="Расскажите нам о вашем проекте" ></textarea><label class="input_label slow"></label>
                                         </div>
                                         
                                         <div class="verify-box">                                        
@@ -212,7 +212,7 @@
                                         <div class="button-box">             
                                             <div class="clapat-button-wrap parallax-wrap link">
                                                 <div class="clapat-button parallax-element">
-                                                    <div class="button-border rounded outline "><input type="submit" class="send_message" id="submit" value="Send Message" /></div>
+                                                    <div class="button-border rounded outline "><input type="submit" class="send_message" id="submit" value="Отправить сообщение" /></div>
                                                 </div>
                                             </div> 
                                         </div>
@@ -234,7 +234,7 @@
                                             <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
                                         </div>
                                     	<div class="box-icon-content">
-                                            <h6 class="no-margins"><a href="mailto:office@montoya.com" class="link"><span>office@montoya.com</span></a></h6>
+                                            <h6 class="no-margins"><a href="mailto:{{contact.email}}" class="link"><span>{{contact.email}}</span></a></h6>
                                             <p>Email</p>
                                         </div>
                                     </div> 
@@ -248,8 +248,8 @@
                                             <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
                                         </div>
                                     	<div class="box-icon-content">
-                                            <h6 class="no-margins">35 M Str, New York, USA</h6>
-                                            <p>Address</p>
+                                            <h6 class="no-margins">{{contact.adress}}</h6>
+                                            <p>Адрес</p>
                                         </div>
                                     </div>
                                                             
@@ -262,8 +262,8 @@
                                             <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
                                         </div>
                                     	<div class="box-icon-content">
-                                            <h6 class="no-margins">0040 (7763) 574-8901</h6>
-                                            <p>Phone</p>
+                                            <h6 class="no-margins">{{contact.phone}}</h6>
+                                            <p>Телефон</p>
                                         </div>
                                     </div>
                                     
@@ -282,9 +282,9 @@
                             <div class="page-nav-wrap">
                                 <div class="page-nav-caption content-full-width text-align-center height-title">                                 
                                     <div class="inner">
-                                    	<div class="next-hero-subtitle caption-timeline"><span>INTERESTED TO DISCOVER MORE FROM OUR WORKS?</span></div>
+                                    	<div class="next-hero-subtitle caption-timeline"><span>{{contact.description_footer}}</span></div>
                                         <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="index-showcase-grid.html">
-                                            <div class="next-hero-title primary-font-title caption-timeline"><span>Projects</span></div>
+                                            <div class="next-hero-title primary-font-title caption-timeline"><span>{{contact.title_footer}}</span></div>
                                         </a>                                        
                                     </div>               
                                 </div>
@@ -309,16 +309,16 @@
                                     <i class="fa-solid fa-angle-up"></i>
                                 </div>
                             </div>
-                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                            <div class="button-text sticky left"><span data-hover="Back Top">Наверх</span></div> 
                         </div>
                         
                         <div class="footer-middle">
-                            <div class="copyright">2024 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. All rights reserved.</div>
+                            <div class="copyright">2024 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. Все права защищены.</div>
                         </div>
                         
                         <div class="socials-wrap">            	
                             <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                            <div class="socials-text">Follow Us</div>
+                            <div class="socials-text">Подписывайтесь на нас</div>
                             <ul class="socials">
                                 <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
                                 <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tw</a></span></li>
@@ -364,7 +364,7 @@
     
     
 		
-    <script src="{% 'js/jquery.min.js' %}"></script>       
+    <script src="{% static 'js/jquery.min.js' %}"></script>       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>    

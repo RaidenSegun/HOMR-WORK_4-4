@@ -37,13 +37,13 @@
                 <div class="inner">                    
                     <div class="trackbar">
                     	<div class="preloader-intro">
-                        	<span>Loading</span>
+                        	<span>Загрузка</span>
                         </div>
                         <div class="loadbar"></div>
                         <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
                     </div>
                     
-                    <div class="percentage-intro">Please wait, content is loading</div>                     
+                    <div class="percentage-intro">Пожалуйста, подождите, контент загружается.</div>                     
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                                             <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
                                         </ul>
                                     </li>
-                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="About">About</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="{% url 'about' %}"><div class="before-span"><span data-hover="About">About</span></div></a></li>
                                     <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
                                     <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="More">More</span></div></a>
                                         <ul>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div> 
+                    <div class="button-text sticky right"><span data-hover="Menu">Меню</span></div> 
                 </div>
                 <!--/Menu Burger -->
             
@@ -136,7 +136,7 @@
                                 <div class="inner">                                    
                                     <h1 class="hero-title caption-timeline primary-font-title"><span>{{about.title}}</span></h1>
                                     <div class="hero-subtitle caption-timeline">
-                                    	<span>МЫ здесь</span>
+                                    	<span>{{about.description}}</span>
                                     </div>                                   
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
                                     </div>
                                 </div>
                                 <div class="hero-footer-right">
-                    				<div id="info-text">Our Short Story</div>
+                    				<div id="info-text">Geeks Short Story</div>
                                 </div>
                             </div>                                  
                         </div>
@@ -173,14 +173,12 @@
                                 
                                 	<div class="clipped-image-pin">                                    	
                                         <div class="clipped-image">
-                                            <img src="{% static 'images/about.jpg' %}" alt="Image Title">
-                                            {% if show_video %}
+                                            {% comment %} <img src="{% static 'images/about.jpg' %}" alt="Image Title"> {% endcomment %}
                                             <div class="content-video-wrapper">
                                                 <video loop muted playsinline class="bgvid">
-                                                    <source src="images/about.mp4" type="video/mp4">
+                                                    <source src="{% static 'images/about2.mp4' %}" type="video/mp4">
                                                 </video>
                                             </div>
-                                            {% endif %}
                                             <div class="clipped-image-gradient"></div>
                                         </div>
                                     </div>
@@ -203,8 +201,8 @@
                             	<div class="move-thumbs-wrapper">
                                 
                                 	<div class="start-thumbs-caption">
-                                    	<h2 class="primary-font-title big-title has-mask-fill">Recognitions</h2>
-                                        <p>OUR PRESTIGIOUS DESIGN AWARDS</p>
+                                    	<h2 class="primary-font-title big-title has-mask-fill">Признания</h2>
+                                        <p>НАШИ ПРЕСТИЖНЫЕ ДИЗАЙН-НАГРАДЫ</p>
                                     </div>
                                 
                                     
@@ -245,50 +243,50 @@
                             <div class="content-row full row_padding_left row_padding_right row_padding_bottom text-align-center dark-section" data-bgcolor="#0c0c0c">
                                 
                                 <hr><hr><hr class="destroy">
-                                <h2 class="big-title primary-font-title no-margins has-mask-fill">More Awards</h2>
+                                <h2 class="big-title primary-font-title no-margins has-mask-fill">Больше наград</h2>
                                 <hr><hr><hr><hr class="destroy">
                                 
                                 <!-- Flex Lists --> 
                                 <ul class="flex-lists-wrapper">                                                            
                                     <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">Awwwards</span>
-                                        <span class="flex-list-center">Developer Award, Site of the Day, Honorable Mention</span>
-                                        <span class="flex-list-right">x08 Awards</span>
+                                        <span class="flex-list-left">Награды</span>
+                                        <span class="flex-list-center">Награда разработчика, Сайт дня, Почетное упоминание</span>
+                                        <span class="flex-list-right">x08 Наград</span>
                                     </li>
                                     <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">CSS Design Awards</span>
-                                        <span class="flex-list-center">Website of the Day, Special Kudos</span>
-                                        <span class="flex-list-right">x06 Awards</span>
+                                        <span class="flex-list-left">CSS Дизайн-награды</span>
+                                        <span class="flex-list-center">Сайт дня, Особое признание</span>
+                                        <span class="flex-list-right">x06 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                     	<span class="flex-list-left">Behance</span>
                                         <span class="flex-list-center">Featured UX/UI and XD Design</span>
-                                        <span class="flex-list-right">x04 Awards</span>
+                                        <span class="flex-list-right">x04 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                         <span class="flex-list-left">CSS Light</span>
                                         <span class="flex-list-center">Featured Website, Featured Design</span>
-                                        <span class="flex-list-right">x12 Awards</span>
+                                        <span class="flex-list-right">x12 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                         <span class="flex-list-left">FWA Awards</span>
                                         <span class="flex-list-center">FWA of the day, FWA of the month</span>
-                                        <span class="flex-list-right">x04 Awards</span>
+                                        <span class="flex-list-right">x04 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                         <span class="flex-list-left">One Page Love</span>
                                         <span class="flex-list-center">Site of the Day</span>
-                                        <span class="flex-list-right">x10 Awards</span>
+                                        <span class="flex-list-right">x10 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                         <span class="flex-list-left">SiteInspire</span>
                                         <span class="flex-list-center">Featured Website</span>
-                                        <span class="flex-list-right">x08 Awards</span>
+                                        <span class="flex-list-right">x08 Награды</span>
                                     </li>
                                     <li class="flex-list link has-animation">
                                         <span class="flex-list-left">CSS Winner</span>
                                         <span class="flex-list-center">Site of the Day, Special Mention</span>
-                                        <span class="flex-list-right">x12 Awards</span>
+                                        <span class="flex-list-right">x12 Награды</span>
                                     </li>                        
                                 </ul>
                                 
@@ -309,7 +307,7 @@
 								
 								<div class="pinned-section">
                                     <div class="pinned-element left">
-                                        <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">Our</span><br><span class="has-mask-fill">Services</span></h2>
+                                        <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">Geeks</span><br><span class="has-mask-fill">Services</span></h2>
                                     </div>
                                     
                                     <div class="scrolling-element right">
@@ -322,7 +320,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">We create stunning and user-friendly websites that make a lasting impression and drive conversions.</dd>
+											<dd class="accordion-content">Мы создаем потрясающие и удобные сайты, которые оставляют неизгладимое впечатление и способствуют увеличению конверсий.</dd>
 
 											<dt>
 												<span class="link"><div>Mobile App Development</div></span>
@@ -332,7 +330,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">Our team crafts innovative and feature-rich mobile applications that cater to the needs of modern users.</dd>
+											<dd class="accordion-content">Наша команда разрабатывает инновационные и функциональные мобильные приложения, которые учитывают потребности современных пользователей.</dd>
 
 											<dt>
 												<span class="link"><div>E-Commerce Solutions</div></span>
@@ -342,7 +340,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">We build seamless online shopping experiences that empower businesses to reach customers globally.</dd>
+											<dd class="accordion-content">Мы создаем безупречные онлайн-магазины, которые помогают бизнесам выходить на международный рынок и достигать клиентов по всему миру.</dd>
 
 											<dt>
 												<span class="link"><div>Digital Marketing</div></span>
@@ -352,7 +350,8 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">Our strategic digital marketing campaigns help businesses amplify their online presence and achieve their growth goals.</dd>
+											<dd class="accordion-content">
+                                                Наши стратегические кампании цифрового маркетинга помогают бизнесам усилить свое онлайн-присутствие и достичь целей роста.</dd>
 
 											<dt>
 												<span class="link"><div>UI/UX Design</div></span>
@@ -362,7 +361,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">We design intuitive and visually appealing user interfaces that enhance user experiences and streamline interactions.</dd>
+											<dd class="accordion-content">Мы разрабатываем интуитивно понятные и визуально привлекательные пользовательские интерфейсы, которые улучшают пользовательский опыт и упрощают взаимодействие.</dd>
 
 											<dt>
 												<span class="link"><div>Brand Strategy</div></span>
@@ -372,7 +371,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content"> Our brand strategists develop strong and compelling brand identities that resonate with target audiences.</dd>
+											<dd class="accordion-content"> Наши брендинговые стратеги создают сильные и убедительные идентичности брендов, которые находят отклик у целевой аудитории.</dd>
 
 											<dt>
 												<span class="link"><div>SEO Optimization</div></span>
@@ -382,7 +381,7 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">We optimize websites to improve search engine visibility, driving organic traffic and increasing online visibility.</dd>
+											<dd class="accordion-content">Мы оптимизируем веб-сайты для улучшения видимости в поисковых системах, что способствует увеличению органического трафика и повышению онлайн-видимости.</dd>
 
 											<dt>
 												<span class="link"><div>Social Media Management</div></span>
@@ -392,7 +391,8 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">Our social media experts manage and curate engaging content, fostering meaningful connections with audiences.</dd>
+											<dd class="accordion-content">
+                                                Наши эксперты по социальным медиа управляют и создают увлекательный контент, способствуя установлению значимых связей с аудиторией.</dd>
 
 											<dt>
 												<span class="link"><div>Content Creation</div></span>
@@ -402,7 +402,8 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">Our creative team produces compelling and impactful content that tells your brand's story and captivates your audience.</dd>
+											<dd class="accordion-content">
+                                                Наша креативная команда создает захватывающий и впечатляющий контент, который рассказывает историю вашего бренда и увлекает вашу аудиторию.</dd>
 
 											<dt>
 												<span class="link"><div>Data Analytics</div></span>
@@ -412,7 +413,8 @@
 													</div>
 												</div>
 											</dt>
-											<dd class="accordion-content">We analyze data to uncover valuable insights and guide data-driven decision-making for business growth and success.</dd>
+											<dd class="accordion-content">
+                                                Мы анализируем данные, чтобы выявить ценные инсайты и направлять принятие решений на основе данных для роста и успеха бизнеса.</dd>
                                     	</dl>    
                                     </div>
                                 </div>
@@ -426,7 +428,7 @@
                             <!-- Row -->
                             <div class="content-row full row_padding_top row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
                             
-                            	<h2 class="big-title primary-font-title"><span class="has-mask-fill">Collaborators</span></h2>
+                            	<h2 class="big-title primary-font-title"><span class="has-mask-fill"> Партнеры</span></h2>
                                 <p>WE DEVELOP GORGEOUS AND MEMORABLE <br class="destroy"> PROJECTS FOR OUR CLIENTS.</p>
                                 <hr><hr>
                                 
@@ -529,9 +531,9 @@
                             <div class="page-nav-wrap">
                                 <div class="page-nav-caption content-full-width text-align-center height-title">                                 
                                     <div class="inner">
-                                    	<div class="next-hero-subtitle caption-timeline"><span>CONTACT US AND LET'S BRING YOUR VISION TO LIFE</span></div>
+                                    	<div class="next-hero-subtitle caption-timeline"><span>Свяжитесь с нами, и давайте воплотим вашу идею в жизнь.</span></div>
                                         <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="Say Hey" href="contact.html">
-                                            <div class="next-hero-title primary-font-title caption-timeline"><span>Contact</span></div>
+                                            <div class="next-hero-title primary-font-title caption-timeline"><span>Контакты</span></div>
                                         </a>                                        
                                     </div>               
                                 </div>
@@ -556,16 +558,16 @@
                                     <i class="fa-solid fa-angle-up"></i>
                                 </div>
                             </div>
-                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                            <div class="button-text sticky left"><span data-hover="Back Top">Наверх</span></div> 
                         </div>
                         
                         <div class="footer-middle">
-                            <div class="copyright">2024 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. All rights reserved.</div>
+                            <div class="copyright">2024 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. Все права защищены.</div>
                         </div>
                         
                         <div class="socials-wrap">            	
                             <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                            <div class="socials-text">Follow Us</div>
+                            <div class="socials-text">Подписывайтесь на нас</div>
                             <ul class="socials">
                                 <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
                                 <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tw</a></span></li>

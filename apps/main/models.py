@@ -81,5 +81,36 @@ class About(models.Model):
         verbose_name_plural = "О нас"
 
 
-
+class Contact(models.Model):
+     title = models.CharField(
+        max_length=255,
+        verbose_name="Заголовок"
+    )
+     description = models.TextField(
+        verbose_name="Описание"
+    )
+     email = models.EmailField(
+        verbose_name="EMail"
+    )
+     adress = models.CharField(
+        max_length=255,
+        verbose_name="Адрес"
+     )
+     phone = models.BigIntegerField(
+        max_length=255,
+        verbose_name="Номер телефона"
+     )
+     title_footer = models.CharField(
+        max_length=255,
+        verbose_name="Нижний заголовок"
+     )
+     description_footer = models.TextField(
+         verbose_name="Описние нижний заголовок"
+     )
+     def __str__(self):
+        return self.title
+    
+     class Meta:
+        verbose_name = "Контакты"
+        verbose_name_plural = "Контакты"
 

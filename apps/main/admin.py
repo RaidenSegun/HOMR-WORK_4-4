@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.main.models import Main, Over, Awards, About
+from apps.main.models import Main, Over, Awards, About, Contact
 # Register your models here.
 
 admin.site.register(Main)
@@ -20,3 +20,7 @@ class AboutAdmin(admin.ModelAdmin):
         return format_html('<video src="{}" width="auto" height="50px" />'.format(obj.video.url))
     
     list_display = ('title', 'description', 'video_tag')
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description')
